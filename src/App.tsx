@@ -2,6 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiaMundial from './components/DiaMundial/DiaMundial'
 import DiscountsPanel from './components/DiscountsPanel/DiscountsPanel'
+import Footer from './components/Footer/Footer'
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <div className="container">
                 <DiscountsPanel />
             </div>
+            <Footer />
         </>
     )
 }
