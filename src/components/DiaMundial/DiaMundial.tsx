@@ -53,7 +53,11 @@ export default function DiaMundial() {
                 color: 'black',
             }}
         >
-            <span>{dia}</span>
+            <span>{new Date().toLocaleDateString('es-ES', {
+                day: 'numeric',
+                month: 'numeric',
+                year: '2-digit',
+            })}: {dia}</span>
         </div>
     )
 }

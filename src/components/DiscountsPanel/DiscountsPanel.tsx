@@ -40,8 +40,9 @@ export default function DiscountsPanel() {
                 </div>
             )}
             <div className={styles.discounts}>
-                {discounts.map((discount) => (
+                {discounts.map((discount, index) => (
                     <Discount
+                        key={index}
                         name={discount.name}
                         description={discount.description}
                         url={discount.url}
