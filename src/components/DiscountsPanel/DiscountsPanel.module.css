@@ -1,0 +1,46 @@
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.discount {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  padding-right: 10px;
+}
+
+.discountImage img{
+  border-radius: 10%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.discountInfo {
+  margin-left: 8px;
+  overflow: auto;
+}
+
+.discountTitle {
+  font-size: 20px;
+}
+
+.discountCategory {
+  font-size: 15px;
+  opacity: 0.7;
+}
