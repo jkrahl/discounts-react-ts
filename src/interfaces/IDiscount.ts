@@ -3,4 +3,5 @@ export default interface IDiscount {
     description: string
     category: string
     url: string
+    favicon: string
 }

@@ -47,6 +47,7 @@ export default function DiscountsPanel() {
                         description={discount.description}
                         url={discount.url}
                         category={discount.category}
+                        favicon={discount.favicon}
                     />
                 ))}
             </div>
