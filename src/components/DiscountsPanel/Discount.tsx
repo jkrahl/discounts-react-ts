@@ -16,17 +16,19 @@ export default function Discount({
 }) {
 
     return (
-        <div className={styles.discount} onClick={() => window.open(url)}>
+        <div className={styles.discount}>
             <div className={styles.discountImage}>
                 <img src={favicon} alt="Logo" height={50} width={50} />
             </div>
             <div className={styles.discountInfo}>
                 <div className={styles.discountTitle}>
-                    <b>
-                        <span>
-                            {name}<ExternalIcon />
-                        </span>
-                    </b>
+                    <a href={url} target="_blank" rel="noreferrer">
+                        <b>
+                            <span>
+                                {name}<ExternalIcon />
+                            </span>
+                        </b>
+                    </a>
                 </div>
                 <div className={styles.discountCategory}>
                     <span>
