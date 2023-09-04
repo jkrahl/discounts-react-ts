@@ -42,15 +42,6 @@ export default function DiaMundial() {
                 }),
     })
 
-    if (info.isLoading) {
-        return <div></div>
-    }
-
-    if (info.isError) {
-        console.error(info.error)
-        return <div></div>
-    }
-
     return (
         <div
             style={{
@@ -66,7 +57,10 @@ export default function DiaMundial() {
                     month: 'numeric',
                     year: '2-digit',
                 })}
-                : {info.data}
+                {': '}
+                {info.isLoading && 'Cargando...'}
+                {info.isError && 'Error'}
+                {info.isSuccess && info.data}
             </span>
         </div>
     )
