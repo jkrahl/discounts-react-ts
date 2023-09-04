@@ -4,9 +4,6 @@ import DiaMundial from './components/DiaMundial/DiaMundial'
 import DiscountsPanel from './components/DiscountsPanel/DiscountsPanel'
 import Footer from './components/Footer/Footer'
 import {
-    useQuery,
-    useMutation,
-    useQueryClient,
     QueryClient,
     QueryClientProvider,
   } from '@tanstack/react-query'
