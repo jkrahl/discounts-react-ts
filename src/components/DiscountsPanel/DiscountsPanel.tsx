@@ -3,44 +3,34 @@ import styles from './DiscountsPanel.module.css'
 import Discount from './Discount'
 import Spinner from 'react-bootstrap/Spinner'
 import IDiscount from '../../interfaces/IDiscount'
+import { useQuery } from '@tanstack/react-query'
 
 export default function DiscountsPanel() {
-    const [loading, setLoading] = React.useState(true)
-    const [discounts, setDiscounts] = React.useState<IDiscount[]>([])
-    const [error, setError] = React.useState(false)
-
-    React.useEffect(() => {
-        fetch(
-            'https://raw.githubusercontent.com/jkrahl/discounts/main/discounts.json'
-        )
-            .then((response) => response.json())
-            .then((data) => {
-                setDiscounts(data)
-                setLoading(false)
-            })
-            .catch((error) => {
-                setError(true)
-                setLoading(false)
-            })
-    }, [])
+    const info = useQuery({
+        queryKey: ['discounts'],
+        queryFn: () =>
+            fetch(
+                'https://raw.githubusercontent.com/jkrahl/discounts/main/discounts.json'
+            ).then((res) => res.json()),
+    })
 
     return (
         <div>
             <h1 className={styles.title}>Discounts for university students</h1>
-            {loading && (
+            {info.isLoading && (
                 <div className={styles.spinner}>
                     <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
                 </div>
             )}
-            {error && (
+            {info.isError && (
                 <div className={styles.error}>
                     <p>Sorry, something went wrong.</p>
                 </div>
             )}
             <div className={styles.discounts}>
-                {discounts.map((discount, index) => (
+                {info.data?.map((discount: IDiscount, index: number) => (
                     <Discount
                         key={index}
                         name={discount.name}
