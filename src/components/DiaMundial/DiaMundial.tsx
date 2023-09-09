@@ -49,6 +49,7 @@ export default function DiaMundial() {
                 backgroundColor: '#D3D3D3',
                 padding: '0 15px',
                 color: 'black',
+                fontSize: '11px',
             }}
         >
             <span>
