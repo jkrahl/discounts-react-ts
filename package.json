@@ -44,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "depcheck": "^1.4.5",
+    "depcheck": "^1.4.7",
     "prettier": "3.0.2"
   }
 }
