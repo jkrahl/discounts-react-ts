@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './DiscountsPanel.module.css'
 import Discount from './Discount'
 import Spinner from 'react-bootstrap/Spinner'

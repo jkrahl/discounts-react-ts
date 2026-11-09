@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './DiscountsPanel.module.css'
 
 export default function Discount({

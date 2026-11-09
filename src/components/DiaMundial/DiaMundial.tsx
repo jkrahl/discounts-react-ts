@@ -1,4 +1,3 @@
-import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 
 interface InternationalDay {
@@ -15,12 +14,12 @@ export default function DiaMundial() {
             )
                 .then((res) => res.json())
                 .then((data: InternationalDay[]) => {
-                    let today = new Date().toLocaleDateString('es-ES', {
+                    const today = new Date().toLocaleDateString('es-ES', {
                         month: 'numeric',
                         day: 'numeric',
                     })
                     // Loop through data to find today's international days
-                    let todayData = data.filter(
+                    const todayData = data.filter(
                         (item: InternationalDay) => item.date === today
                     )
                     // If there are any, add them to the page
